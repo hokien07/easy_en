@@ -43,7 +43,7 @@ class EasyEnglishCommand extends Command
     {
         $word = Word::query()->whereDate('date', now()->toDate())->inRandomOrder()->first();
         if($word){
-            $result = $this->bot->sendMessage($word->word);
+            $result = $this->bot->sendMessage("$word->word - $word->vn_des");
             if($result->ok) {
                 $word->fill([
                     'count' => (int)$word->count + 1,
