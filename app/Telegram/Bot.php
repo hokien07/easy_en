@@ -13,7 +13,7 @@ class Bot
     public function __construct($token)
     {
         $this->client = new Client([
-            "base_uri" => "https://api.telegram.org/bot{$token}/"
+            "base_uri" => "https://api.telegram.org/bot5392005458:AAHg-fTLVNl5T2Xko82Rei6rpuTaOmaoCew/"
         ]);
 
         $this->fetChatId();
